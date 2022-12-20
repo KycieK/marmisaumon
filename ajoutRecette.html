@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nouvelle recette</title>
+        <link rel= "stylesheet" href="proj.css">
+        <script type = "text/javascript" src = "proj.js"></script>
+
+        <div class = "Titre2">
+            <h3>
+                marmi-saumon
+            </h3>
+        </div>
+        <div class = "accueil"> 
+            <a href = 'accueil.html'><img src = 'téléchargé.png' alt="icone accueil" height="30px" width="30px"></a>
+        </div> 
+    </head>
+
+    <body>
+        <header> 
+            <h2>Ajoutez votre recette ici !</h2>
+        </header> 
+        <section class="liste">
+            <form method = "post" name="newTask" class="box" id="newTask" onsubmit="return false">
+                <strong>Nom de la recette : </strong>
+                <input type="'text" id="recette" name="newRecette" size=18 placeholder="pudding au caramel" required>
+
+                <br><br><br><strong>Informations générales :<br></strong>
+                <strong><br>Temps total : </strong>
+                <input type="'text" id="temps" name="tpsTot" size=1 placeholder="***">
+                <select name="tempsUnité" size=1>
+                    <option>min</option>
+                    <option>h</option>
+                </select>
+                <strong><br>Temps de préparation : </strong>
+                <input type="'text" id="prep" name="tpsPrep" size=1 placeholder="***">
+                <select name="tempsUnité" size=1>
+                    <option>min</option>
+                    <option>h</option>
+                </select>
+                <strong><br>Temps de cuisson : </strong>
+                <input type="'text" id="cuisson" name="tpsCuis" size=1 placeholder="***">
+                <select name="tempsUnité" size=1>
+                    <option>min</option>
+                    <option>h</option>
+                </select>
+
+                <br><br><br><strong>Ingrédients :<br></strong>
+                <button value="Add Input" onclick="AddInput();'%0D%0A'">Ajouter un ingrédient</button>
+                <button value="Add Input" onclick="RemoveInput()">Retirer un ingrédient</button>
+
+            </form> 
+        </section>
+
+        <footer>
+        </footer>
+    </body>
+</html>
