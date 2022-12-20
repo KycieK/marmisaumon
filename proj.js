@@ -1,4 +1,5 @@
 var i = 0;
+
 function AddInput()
 {
     var x = document.getElementById("ingredients");
@@ -14,18 +15,13 @@ function AddInput()
     x.appendChild(input);
 }
 
-function RemoveInput()
+
+function changeImage(element)
 {
-    if(i==0){return alert("aucun ingrédient à supprimer")};
-    var input = document.getElementById(i);
-    input.remove();
-    i = i-1;
-}
-
-function passageDeLaSouris(element) {
-    element.setAttribute('src', 'toque21.png');
-}
-
-function departDeLaSouris(element) {
-    element.setAttribute('src', 'toque2.png');
+  var v = element.getAttribute('src');
+  if(v == "toque2.png")
+    (v = "toque21.png");
+  else
+    (v = "toque2.png");
+  element.setAttribute('src', v);	
 }
