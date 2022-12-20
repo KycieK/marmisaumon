@@ -164,10 +164,16 @@ header{
     margin-left:10px;
 }
 
+.imgdiff{
+    background: url("toque2.png") no-repeat;
+}
 
+.imgdiff:hover{
+    background: url("toque21.png") no-repeat;
+}
 
 #ingredients input{
     display: block;
-    margin-top : 8px;
-  
+    margin-top : 8px; 
 }
+

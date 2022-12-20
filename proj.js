@@ -21,3 +21,11 @@ function RemoveInput()
     input.remove();
     i = i-1;
 }
+
+function passageDeLaSouris(element) {
+    element.setAttribute('src', 'toque21.png');
+}
+
+function departDeLaSouris(element) {
+    element.setAttribute('src', 'toque2.png');
+}
