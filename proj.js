@@ -19,9 +19,20 @@ function AddInput()
 function changeImage(element)
 {
   var v = element.getAttribute('src');
-  if(v == "toque2.png")
+  var r = element.getAttribute('class');
+  if(v == "toque2.png"){
     (v = "toque21.png");
-  else
+    element.setAttribute('src', v);
+    while(r>0){
+        r = r - 1;
+        
+        
+    }
+  }
+  else{
     (v = "toque2.png");
+  }
   element.setAttribute('src', v);	
+  
+  
 }
