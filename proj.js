@@ -18,22 +18,24 @@ function AddInput()
 
 function changeImage(element)
 {
-  var v = element.getAttribute('src');
-  var r = element.getAttribute('class');
+  let v = element.getAttribute('src');
   if(v == "toque2.png"){
     (v = "toque21.png");
+    let r = element.getAttribute('class');
     while(r>0){
-        var s = document.getElementsByClassName(r).item(0);
+        let s = document.getElementsByClassName(r).item(0);
         s.setAttribute('src',v);
-        r = r - 1;
+        r--;
     }
   }
   else{
     (v = "toque2.png");
-    while(r<6){
-        var t = document.getElementsByClassName(r).item(0);
+    let q = element.getAttribute('class');
+    while(q<6){
+        let t = document.getElementsByClassName(q).item(0);
         t.setAttribute('src',v);
-        r = r + 1;
+        q++;
     }
   } 
+  
 }
