@@ -22,17 +22,18 @@ function changeImage(element)
   var r = element.getAttribute('class');
   if(v == "toque2.png"){
     (v = "toque21.png");
-    element.setAttribute('src', v);
     while(r>0){
+        var s = document.getElementsByClassName(r).item(0);
+        s.setAttribute('src',v);
         r = r - 1;
-        
-        
     }
   }
   else{
     (v = "toque2.png");
-  }
-  element.setAttribute('src', v);	
-  
-  
+    while(r<6){
+        var t = document.getElementsByClassName(r).item(0);
+        t.setAttribute('src',v);
+        r = r + 1;
+    }
+  } 
 }
