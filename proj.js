@@ -9,10 +9,16 @@ function AddInput()
     input.placeholder = "nom ingrédient";
     input.size = input.placeholder.length;
 
-    i = i + 1;
+    i++;
     input.id = i;
 
     x.appendChild(input);
+}
+
+function RemoveInput(){
+    var x = document.getElementById(i);
+    x.remove();
+    i--;
 }
 
 
