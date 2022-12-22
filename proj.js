@@ -59,3 +59,9 @@ function changeImage(element)
   } 
   
 }
+
+//permet un reset de la diffcultée par un double clique sur la premiere toque
+function resetDiff(){
+    let m = document.getElementsByClassName(1).item(0);
+    m.setAttribute('src', 'toque2.png');
+}
