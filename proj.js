@@ -20,7 +20,7 @@ function AddInput()
     input2.placeholder = "quantité";
 
     input3.setAttribute('type', 'text');
-    input3.placeholder = "unité : grammes";
+    input3.placeholder = "unité : gramme(s) / kilo(s)";
     input3.size = input3.placeholder.length;
 
 
