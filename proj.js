@@ -10,15 +10,17 @@ function AddInput()
     var input3 = document.createElement('input');
 
     input1.setAttribute('type', 'text');
-    input1.placeholder = "nom ingrédient";
+    input1.placeholder = "nom ingrédient : poivre";
     input1.size = input1.placeholder.length;
     input1.name = 'premier';
 
     input2.setAttribute('type', 'number');
+    input2.setAttribute('min','0');
+    input2.setAttribute('max','999');
     input2.placeholder = "quantité";
 
     input3.setAttribute('type', 'text');
-    input3.placeholder = "unité";
+    input3.placeholder = "unité : grammes";
     input3.size = input3.placeholder.length;
 
 

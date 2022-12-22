@@ -24,19 +24,19 @@
 
         <section class="liste">
             <form method = "post" name="newTask" class="box" id="newTask" onsubmit="return false">
-                <strong>Nom de la recette : </strong>
+                <label>Nom de la recette : </label>
                 <input type="'text" id="recette" name="newRecette" size=18 placeholder="pudding au caramel" required>
 
 
-                <br><br><br><strong>Informations générales :<br></strong>
-                <strong><br>Temps total : </strong>
+                <br><br><br><label>Informations générales :<br></label>
+                <label><br>Temps total : </label>
                 <input type="'text" id="temps" name="tpsTot" size=1 placeholder="***">
                 <select name="tempsUnité" size=1>
                     <option>min</option>
                     <option>h</option>
                 </select>
 
-                <strong><br>Temps de préparation : </strong>
+                <label><br>Temps de préparation : </label>
                 <input type="'text" id="prep" name="tpsPrep" size=1 placeholder="***">
                 <select name="tempsUnité" size=1>
                     <option>min</option>
@@ -44,7 +44,7 @@
                 </select>
 
             
-                <strong><br>Temps de cuisson : </strong>
+                <label><br>Temps de cuisson : </label>
                 <input type="'text" id="cuisson" name="tpsCuis" size=1 placeholder="***">
                 <select name="tempsUnité" size=1>
                     <option>min</option>
@@ -52,7 +52,7 @@
                 </select>
 
 
-                <strong><br>Difficulté de la recette : </strong>
+                <label><br>Difficulté de la recette : </label>
                 <img id='imgdiff' class=1 src='toque2.png' onclick="changeImage(this)" ondblclick="resetDiff()"/>
                 <img id='imgdiff' class=2 src='toque2.png' onclick="changeImage(this)" />
                 <img id='imgdiff' class=3 src='toque2.png' onclick="changeImage(this)" />
@@ -60,10 +60,24 @@
                 <img id='imgdiff' class=5 src='toque2.png' onclick="changeImage(this)" />
 
 
-                <br><br><br><strong>Ingrédients :<br></strong>
+                <br><br><br><label>Ingrédients :<br></label>
                 <button value="Add Input" onclick="AddInput()">Ajouter un ingrédient</button>
                 <button value="Add Input" onclick="RemoveInput()">Retirer un ingrédient</button>
                 <div id="ingredients"></div>
+
+                <div class="instructions1">
+                    <br><br><br>
+                    <label>Détaillez la préparation de vôtre recette ci-dessous (pré-cuisson)</label>
+                    <textarea rows="10" cols="80"></textarea>
+                </div>
+
+                <div class="instructions2">
+                    <br><br>
+                    <label>Détaillez la cuisson de vôtre recette</label>
+                    <textarea rows="10" cols="80"></textarea>
+                </div>
+
+                
             </form> 
         </section>
 

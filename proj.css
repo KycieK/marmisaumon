@@ -94,8 +94,6 @@ header{
     font-size: large;
 }
 
-
-
 .menu li a:hover {
     background-color:#cdaf98;
     border-radius: 10px;
@@ -115,7 +113,6 @@ header{
 .menu li:hover ul{
     max-height: 30em;
 }
-
 
 .menu li ul li {
     background-color: #ffffff;
@@ -188,9 +185,6 @@ header{
     clear:left;
 }
 
-
-
 #imgdiff{
     width: 4%;
 }
-
