@@ -172,9 +172,17 @@ header{
     background: url("toque21.png") no-repeat;
 }
 
-#ingredients input{
-    display: block;
+#ingredients input[type="text"]{
     margin-top : 8px; 
+    margin-right : 8px;
+    float:left;
+    clear:left;
+}
+
+#ingredients input[type="number"]{
+    margin-top : 8px; 
+    margin-right : 8px;
+    float: left;
 }
 
 #imgdiff{

@@ -1,25 +1,38 @@
 var i = 0;
+var r = 0;
 
 //ajout d'un ingrédient (on leur donne aussi un id different pour tous)
 function AddInput()
 {
     var x = document.getElementById("ingredients");
-    var input = document.createElement('input');
+    var input1 = document.createElement('input');
+    var input2 = document.createElement('input');
+    var select = document.createElement('select');
 
-    input.setAttribute('type', 'text');
-    input.placeholder = "nom ingrédient";
-    input.size = input.placeholder.length;
+    input1.setAttribute('type', 'text');
+    input1.placeholder = "nom ingrédient";
+    input1.size = input1.placeholder.length;
+
+    input2.setAttribute('type', 'number');
+    input2.className = 'pet';
+    input2.placeholder = "quantité";
+    input2.size = input2.placeholder.length;
+
 
     i++;
-    input.id = i;
+    input1.id = i;
+    input2.id = i;
 
-    x.appendChild(input);
+    x.appendChild(input1);
+    x.appendChild(input2);
 }
 
 //suppression de l'ingrédient ajouté le plus récent (grâce aux id differents)
 function RemoveInput(){
     var x = document.getElementById(i);
     x.remove();
+    var y = document.getElementById(i);
+    y.remove();
     i--;
 }
 
