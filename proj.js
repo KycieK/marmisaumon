@@ -14,7 +14,6 @@ function AddInput()
     input1.size = input1.placeholder.length;
 
     input2.setAttribute('type', 'number');
-    input2.className = 'pet';
     input2.placeholder = "quantité";
     input2.size = input2.placeholder.length;
 
