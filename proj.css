@@ -176,14 +176,19 @@ header{
     margin-top : 8px; 
     margin-right : 8px;
     float:left;
-    clear:left;
 }
 
 #ingredients input[type="number"]{
     margin-top : 8px; 
     margin-right : 8px;
-    float: left;
+    float:left;
 }
+
+#ingredients input[name ="premier"]{
+    clear:left;
+}
+
+
 
 #imgdiff{
     width: 4%;

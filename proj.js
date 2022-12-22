@@ -7,23 +7,29 @@ function AddInput()
     var x = document.getElementById("ingredients");
     var input1 = document.createElement('input');
     var input2 = document.createElement('input');
-    var select = document.createElement('select');
+    var input3 = document.createElement('input');
 
     input1.setAttribute('type', 'text');
     input1.placeholder = "nom ingrédient";
     input1.size = input1.placeholder.length;
+    input1.name = 'premier';
 
     input2.setAttribute('type', 'number');
     input2.placeholder = "quantité";
-    input2.size = input2.placeholder.length;
+
+    input3.setAttribute('type', 'text');
+    input3.placeholder = "unité";
+    input3.size = input3.placeholder.length;
 
 
     i++;
     input1.id = i;
     input2.id = i;
+    input3.id = i;
 
     x.appendChild(input1);
     x.appendChild(input2);
+    x.appendChild(input3);
 }
 
 //suppression de l'ingrédient ajouté le plus récent (grâce aux id differents)
@@ -32,6 +38,8 @@ function RemoveInput(){
     x.remove();
     var y = document.getElementById(i);
     y.remove();
+    var z = document.getElementById(i);
+    z.remove();
     i--;
 }
 
