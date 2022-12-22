@@ -34,6 +34,9 @@ function AddInput()
 
 //suppression de l'ingrédient ajouté le plus récent (grâce aux id differents)
 function RemoveInput(){
+    if(i==0) {
+        alert("il n'y a plus d'ingrédient à retirer");
+    }
     var x = document.getElementById(i);
     x.remove();
     var y = document.getElementById(i);
