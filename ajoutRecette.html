@@ -61,17 +61,22 @@
 
 
                 <br><br><br><label>Ingrédients :<br></label>
-                <button value="Add Input" onclick="AddInput()">Ajouter un ingrédient</button>
-                <button value="Add Input" onclick="RemoveInput()">Retirer un ingrédient</button>
+                <button value="Add Input" onclick="addInput()">Ajouter un ingrédient</button>
+                <button value="Add Input" onclick="removeInput()">Retirer un ingrédient</button>
                 <div id="ingredients"></div>
                 <br>
                 <div class="instructions">
                     <br><br><br>
-                    <label>Détaillez la préparation de vôtre recette ci-dessous (pré-cuisson)</label>
+                    <label>Détaillez la préparation de vôtre recette ci-dessous (pré-cuisson) :</label>
                     <textarea rows="10" cols="80" placeholder="Eplucher les légumes..."></textarea>
                     <br><br>
-                    <label>Détaillez la cuisson de vôtre recette</label>
-                    <textarea rows="10" cols="80" placeholder="Enfourner la préparation au four à 200°C pendant 2 heures..."></textarea>
+                    <label>Détaillez la cuisson de vôtre recette :</label>
+                    <textarea rows="10" cols="80" placeholder="Enfourner la préparation à 200°C pendant 2 heures..."></textarea>
+                    <br><br>
+                    <label for="checkbox">Vous avez une préparation à effectuer en parallèle à la cuisson ?</label>
+                    <input type="checkbox" id="checkbox" onchange="changeId()">
+                    <textarea id='invisible' rows="10" cols="80" style="display:none"></textarea>
+
                 </div>
 
 

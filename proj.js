@@ -2,7 +2,7 @@ var i = 0;
 var r = 0;
 
 //ajout d'un ingrédient (on leur donne aussi un id different pour tous)
-function AddInput()
+function addInput()
 {
     var x = document.getElementById("ingredients");
     var input1 = document.createElement('input');
@@ -35,7 +35,7 @@ function AddInput()
 }
 
 //suppression de l'ingrédient ajouté le plus récent (grâce aux id differents)
-function RemoveInput(){
+function removeInput(){
     if(i==0) {
         return alert("il n'y a plus d'ingrédient à retirer");
     }
@@ -77,4 +77,13 @@ function changeImage(element)
 function resetDiff(){
     let m = document.getElementsByClassName(1).item(0);
     m.setAttribute('src', 'toque2.png');
+}
+
+function changeId(){
+    let x = document.getElementById("invisible");
+
+    if(x.getAttribute('style')=='display:none'){
+        x.setAttribute('style','display:block');
+    }
+    else x.setAttribute('style','display:none')
 }
