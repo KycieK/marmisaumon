@@ -26,7 +26,19 @@
             <form method = "post" name="newTask" class="box" id="newTask" onsubmit="return false">
                 <label>Nom de la recette : </label>
                 <input type="'text" id="recette" name="newRecette" size=18 placeholder="pudding au caramel" required>
-
+                <br><br>
+                <label>Type de la recette : </label>
+                <select name="repas" size=auto>
+                    <option>Petit déjeuner</option>
+                    <option>Déjeuner</option>
+                    <option>Goûter</option>
+                    <option>Dessert</option>
+                </select>
+                <select name="type" size=auto>
+                    <option>sucré</option>
+                    <option>salé</option>
+                    <option>sucré-salé</option>
+                </select>
 
                 <br><br><br><label>Informations générales :<br></label>
                 <label><br>Temps total : </label>
