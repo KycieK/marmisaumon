@@ -53,10 +53,15 @@ h3{
 }
 
 .bandeauImg{
-    height: 200px;
+    height: 190px;
     margin:0;
     background:white;
     overflow-x:scroll;
+}
+
+.bandeauImg #recetteMoment{
+    display:inline-flex;
+    width:37%;
 }
 
 .menu {
@@ -132,7 +137,7 @@ h3{
 }
 
 .menu li ul li a:hover {
-        color: #d67c37;
+    color: #d67c37;
 }
 
 .dernier {
