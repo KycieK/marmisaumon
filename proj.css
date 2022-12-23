@@ -55,8 +55,9 @@ h3{
 .bandeauImg{
     height: 190px;
     margin:0;
-    background:white;
+    background:transparent;
     overflow-x:scroll;
+    box-shadow: 1px 2px 10px grey;
 }
 
 .bandeauImg #recetteMoment{
