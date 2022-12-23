@@ -52,10 +52,11 @@ h3{
     
 }
 
-header{
-    height: 130px;
-    border-radius: 10px;
-    position: relative;
+.bandeauImg{
+    height: 200px;
+    margin:0;
+    background:white;
+    overflow-x:scroll;
 }
 
 .menu {
