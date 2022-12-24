@@ -51,25 +51,25 @@ function removeInput(){
 //gère l'affichage des toques qui correspondent à la difficultée de la recette ajoutée
 function changeImage(element)
 {
-  let v = element.getAttribute('src');
-  if(v == "toque2.png"){
-    (v = "toque21.png");
-    let r = element.getAttribute('class');
-    while(r>0){
-        let s = document.getElementsByClassName(r).item(0);
-        s.setAttribute('src',v);
-        r--;
+    let v = element.getAttribute('src');
+    if(v == "toque2.png"){
+        (v = "toque21.png");
+        let r = element.getAttribute('class');
+        while(r>0){
+            let s = document.getElementsByClassName(r).item(0);
+            s.setAttribute('src',v);
+            r--;
+        }
     }
-  }
-  else{
-    (v = "toque2.png");
-    let q = element.getAttribute('class');
-    while(q<5){
-        q++;
-        let t = document.getElementsByClassName(q).item(0);
-        t.setAttribute('src',v);
-    }
-  } 
+    else{
+        (v = "toque2.png");
+        let q = element.getAttribute('class');
+        while(q<5){
+            q++;
+            let t = document.getElementsByClassName(q).item(0);
+            t.setAttribute('src',v);
+        }
+    } 
   
 }
 

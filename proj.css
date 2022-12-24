@@ -5,21 +5,21 @@
 .texteAccueil {font-size: 1.7em;}
 
 @media screen and (max-width: 64em) {
-.texteAccueil {
-    font-size: 1.6em;
-  }
+    .texteAccueil {
+        font-size: 1.6em;
+    }
 }
 
 @media screen and (max-width: 50em) {
-.texteAccueil {
-    font-size: 1.4em;
-  }
+    .texteAccueil {
+        font-size: 1.4em;
+    }
 }
 
 @media screen and (max-width: 40em){
-.texteAccueil {
-    font-size: 1.2em;
-  }
+    .texteAccueil {
+        font-size: 1.2em;
+    }
 }
 
 /*=================*/
@@ -35,33 +35,33 @@ body{
 h1 {font-size: 10em;}
 
 @media screen and (max-width: 68em) {
-h1 {
-    font-size: 8em;
-  }
+    h1 {
+        font-size: 8em;
+    }
 }
 
 @media screen and (max-width: 57em) {
     h1 {
         font-size: 7em;
-      }
     }
+}
 
 @media screen and (max-width: 51em) {
-h1 {
-    font-size: 6em;
-  }
+    h1 {
+        font-size: 6em;
+    }
 }
 
 @media screen and (max-width: 45em) {
     h1 {
         font-size: 5em;
-      }
     }
+}
 
 @media screen and (max-width: 40em){
-h1 {
-    font-size: 4em;
-  }
+    h1 {
+        font-size: 4em;
+    }
 }
 
 h1{
@@ -80,7 +80,7 @@ h2{
     font-style: italic;
     color:rgb(91, 77, 51);
     font-size: 1.8em;
-    margin-left: 20px;
+    margin-left: 10px;
     text-shadow: 5px 5px 5px rgb(92, 88, 88);
 }
 
@@ -88,20 +88,20 @@ h2{
 @media screen and (max-width: 64em) {
     h2 {
         font-size: 1.6em;
-      }
-    }
+    }    
+}
     
-    @media screen and (max-width: 50em) {
+@media screen and (max-width: 50em) {
     h2 {
         font-size: 1.4em;
-      }
     }
+}
     
-    @media screen and (max-width: 40em){
+@media screen and (max-width: 40em){
     h2 {
         font-size: 1.2em;
-      }
     }
+}
 
 .ajout :hover {
     color:rgb(255, 0, 0);
@@ -109,12 +109,32 @@ h2{
 
 /*=================*/
 
-h3{
-    font-size: 40px;
+h3 {
+    font-size: 3.4em;
     margin-left: 20px;
 }
 
-.Titre{
+@media screen and (max-width: 64em) {
+    h3 {
+        font-size: 3.1em;
+    }    
+}
+    
+@media screen and (max-width: 50em) {
+    h3 {
+        font-size: 2.8em;
+    }
+}
+    
+@media screen and (max-width: 40em){
+    h3 {
+        font-size: 2.5em;
+    }
+}
+
+/*=================*/
+
+.Titre {
     font-family: 'Dancing Script';
     letter-spacing: 0.16rem;
     color: transparent;
@@ -153,20 +173,20 @@ h3{
 @media screen and (max-width: 64em) {
     .bandeauImg {
         height: 160px;
-      }
     }
+}
     
-    @media screen and (max-width: 50em) {
+@media screen and (max-width: 50em) {
     .bandeauImg {
         height: 140px;
-      }
     }
+}
     
-    @media screen and (max-width: 40em){
+@media screen and (max-width: 40em){
     .bandeauImg {
         height: 130px;
-      }
     }
+}
 
 /*=================*/
 
@@ -181,20 +201,20 @@ h3{
 @media screen and (max-width: 64em) {
     .bandeauImg #recetteMoment{
         height: 150px;
-      }
     }
+}
     
-    @media screen and (max-width: 50em) {
+@media screen and (max-width: 50em) {
     .bandeauImg #recetteMoment {
         height: 130px;
-      }
     }
+}
     
-    @media screen and (max-width: 40em){
+@media screen and (max-width: 40em){
     .bandeauImg #recetteMoment {
         height: 120px;
-      }
     }
+}
 
 /*=================*/
 
@@ -324,9 +344,27 @@ h3{
 }
 
 #imgdiff{
-    width:100%;
-    max-width:30px;
-    height:auto;
+    width: 100%;
+    max-width: 45px;
+    height: auto;
+}
+
+@media screen and (max-width: 64em) {
+    #imgdiff{
+        max-width: 40px;
+    }    
+}
+    
+@media screen and (max-width: 50em) {
+    #imgdiff {
+        max-width: 35px;
+    }
+}
+    
+@media screen and (max-width: 40em){
+    #imgdiff {
+        max-width: 30px;
+    }
 }
 
 .instructions{
@@ -341,9 +379,32 @@ textarea{
     block-size: 150px;
 }
 
+/*=================*/
+
 label{
     clear:left;
+    font-size: 1.4em;
 }
+
+@media screen and (max-width: 64em) {
+    label {
+        font-size: 1.3em;
+    }    
+}
+    
+@media screen and (max-width: 50em) {
+    label {
+        font-size: 1.2em;
+    }
+}
+    
+@media screen and (max-width: 40em){
+    label {
+        font-size: 1.1em;
+    }
+}
+
+/*=================*/
 
 .alignement{
     display:block;
