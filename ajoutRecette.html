@@ -29,13 +29,13 @@
                 <input type="'text" id="recette" name="newRecette" size=18 placeholder="pudding au caramel" required>
                 <br><br>
                 <label>Type de la recette : </label>
-                <select name="repas" size=auto>
+                <select name="repas" id="quelRepas" size=auto>
                     <option>Petit déjeuner</option>
                     <option>Déjeuner</option>
                     <option>Goûter</option>
-                    <option>Dessert</option>
+                    <option>Diner</option>
                 </select>
-                <select name="type" size=auto>
+                <select name="type" id="typeRepas" size=auto>
                     <option>sucré</option>
                     <option>salé</option>
                     <option>sucré-salé</option>
@@ -43,23 +43,23 @@
 
                 <br><br><br><label>Informations générales :<br></label>
                 <label><br>Temps total : </label>
-                <input type="text" id="temps" name="tpsh" size = 1 placeholder="***">
+                <input type="number" id="temps1.1" min="0" max="24" name="tpsh" size = 1 placeholder="00">
                 <label>h</label>
-                <input type="text" id="temps" name="tpmin" size = 1 placeholder="***">
+                <input type="number" id="temps1.2" min="0" max="59" name="tpmin" size = 1 placeholder="00">
                 <label>min</label>
 
 
                 <label><br>Temps de préparation : </label>
-                <input type="text" id="temps" name="tpsh" size = 1 placeholder="***">
+                <input type="number" id="temps2.1" min="0" max="24" name="tpsh" size = 1 placeholder="00">
                 <label>h</label>
-                <input type="text" id="temps" name="tpmin" size = 1 placeholder="***">
+                <input type="number" id="temps2.2" min="0" max="59" name="tpmin" size = 1 placeholder="00">
                 <label>min</label>
 
             
                 <label><br>Temps de cuisson : </label>
-                <input type="text" id="temps" name="tpsh" size = 1 placeholder="***">
+                <input type="number" id="temps3.1" min="0" max="24" name="tpsh" size = 1 placeholder="00">
                 <label>h</label>
-                <input type="text" id="temps" name="tpmin" size = 1 placeholder="***">
+                <input type="number" id="temps3.2" min="0" max="59" name="tpmin" size = 1 placeholder="00">
                 <label>min</label>
 
 
@@ -79,17 +79,18 @@
                 <div class="instructions">
                     <br><br><br>
                     <label class="alignement">Détaillez la préparation de votre recette ci-dessous (pré-cuisson) :</label>
-                    <textarea id='box' placeholder="Eplucher les légumes..."></textarea>
+                    <textarea id="box1" placeholder="Eplucher les légumes..."></textarea>
                     <br><br>
                     <label class="alignement">Détaillez la cuisson de votre recette :</label>
-                    <textarea id="box" placeholder="Enfourner la préparation à 200°C pendant 2 heures..."></textarea>
+                    <textarea id="box2" placeholder="Enfourner la préparation à 200°C pendant 2 heures..."></textarea>
                     <br><br>
                     <label class="spe" for="checkbox">Préparation pendant la cuisson :</label>
                     <input type="checkbox" id="checkbox" onchange="changeId()">
                     <textarea id='invisible' style="display:none" placeholder="Pendant la cuisson, préparer la sauce..."></textarea>
 
                 </div>
-
+                <br><br><br><br>
+                <button onclick="addRecette()">Ajouter la recette</button>
             <br><br><br><br><br><br><br><br><br><br>
             </form> 
         </section>
