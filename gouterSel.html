@@ -56,8 +56,9 @@
             </section>
         </header>
 
-        <section class="liste">
-            <form method = "post" name="newTask" class="box" id="newTask" onsubmit="return false">
+        <button onclick="displayForm()" id="disparait" style="display:block">Ajouter une recette</button>
+
+        <section class="liste" id="invisibleMain" style="display:none">            <form method = "post" name="newTask" class="box" id="newTask" onsubmit="return false">
                 <label>Nom de la recette : </label>
                 <input type="'text" id="recette" name="newRecette" size=18 placeholder="pudding au caramel" required>
                 <br><br>
@@ -124,6 +125,7 @@
                 </div>
                 <br><br><br><br>
                 <button onclick="addRecette()">Ajouter la recette</button>
+                <button onclick="cancel()">Annuler</button>
             <br><br><br><br><br><br><br><br><br><br>
             </form> 
         </section>

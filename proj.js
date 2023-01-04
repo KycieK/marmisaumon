@@ -83,6 +83,20 @@ function removeInput(){
     i--;
 }
 
+function displayForm() {
+    let x = document.getElementById("invisibleMain");
+    let y = document.getElementById("disparait");
+    x.setAttribute('style','display:block');
+    y.setAttribute('style','display:none')
+}
+
+function cancel() {
+    let x = document.getElementById("invisibleMain");
+    let y = document.getElementById("disparait");
+    y.setAttribute('style','display:block');
+    x.setAttribute('style','display:none')
+}
+
 //zone de texte de la preparation pendant la cuisson 
 function changeId(){
     let x = document.getElementById("invisible");
