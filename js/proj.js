@@ -144,6 +144,9 @@ function cancel() {
     let m5 = document.getElementsByClassName(5).item(0);
     m5.setAttribute('src', 'toque2.png');
 
+    let d = document.getElementById("invisible");
+    d.setAttribute('style','display:none')
+
     while (i > 0) {
         var a = document.getElementById(i);
         a.remove();
