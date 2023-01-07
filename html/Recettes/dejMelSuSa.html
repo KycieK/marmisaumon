@@ -60,7 +60,7 @@
         <button onclick="displayForm()" id="disparait" style="display:block">Ajouter une recette</button>
 
         <section class="liste" id="invisibleMain" style="display:none">
-            <form method = "post" name="newRecette" class="box" id="newRecette" onsubmit="return false">
+            <form method = "post" name="newRecette" class="box" onsubmit="return false">
                 <label>Nom de la recette : </label>
                 <input type="'text" id="recette" name="Recette" size=18 placeholder="pudding au caramel" required>
 
@@ -117,10 +117,10 @@
                 <button onclick="cancel()">Annuler</button>
                 <br><br><br><br><br><br><br><br><br><br>
             </form> 
-            <div class = "ajoutRecette">
-                <label1></label1>
-                <img></img>
-                <label2></label2>
+            <div id = "newRecette">
+                <label1 id="newRecette"></label1>
+                <img id = "newRecetteImg"></img>
+                <label2 id ="newRecette2"></label2>
             </div>
         </section>
 

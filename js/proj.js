@@ -170,16 +170,24 @@ function addRecette(){
     const CuiRecette = document.getElementById("box2").value;
     const prepCuiRecette = document.getElementById("invisible").value;
 
-    const newRecette = document.getElementById('newRecette'); 
-    newRecette.append(nomRecette,"\n" + tempsTotalH,tempsTotalMin,tempsPrepH,tempsPrepMin,tempsCuiH,tempsCuiMin,toque1,toque2,toque3,toque4,toque5);
+    const newRecette = document.getElementById('newRecette');
+    const newRecetteImg = document.getElementById('newRecetteImg');
+    const newRecette2 = document.getElementById('newRecette2');
+
+    document.getElementById('newRecette').innerHTML = nomRecette + "<br>" + "Le temps total que vous devez prévoir est de  " + tempsTotalH  +"h"+ tempsTotalMin + 'min</br>' + "Le temps de préparation est de " + tempsPrepH + "h" + tempsPrepMin + "min<br>" + "Le temps de cuisson est de " + tempsCuiH + "h" + tempsCuiMin + "min<br>";
+    var pval = '';
     if(i>0) {
         do{
-            newRecette.append(listeNomIngredients[i],listeQtiteIngredients[i],listeGrandeurIngredients[i]);
+            pval = listeNomIngredients[i] + " " + listeQtiteIngredients[i] + " " + listeGrandeurIngredients[i] +"<br>"+pval;
+            listeNomIngredients.push(listeNomIngredients[i]);
+            listeQtiteIngredients.push(listeQtiteIngredients[i]);
+            listeGrandeurIngredients.push(listeGrandeurIngredients[i]);
             i--;
         }while(i>0)
     }
-    if(prepRecette != ''){newRecette.append(prepRecette);}
-    if(CuiRecette != ''){newRecette.append(CuiRecette);}
-    if(prepCuiRecette != ''){newRecette.append(prepCuiRecette);}
+    document.getElementById('newRecette2').innerHTML = pval + "<br>";
+    if(prepRecette != ''){newRecette2.append(prepRecette);}
+    if(CuiRecette != ''){newRecette2.append(CuiRecette);}
+    if(prepCuiRecette != ''){newRecette2.append(prepCuiRecette);}
     
 }
