@@ -114,7 +114,7 @@ h2{
     letter-spacing: 0.16rem;
     color: transparent;
     display: flex;
-    background : url('../Fichiers/th.gif') center/cover;
+    background : url('../Images/th.gif') center/cover;
     -webkit-background-clip: text;
     -webkit-text-stroke: 1px rgb(43, 50, 44);
     text-shadow: 5px 5px 5px rgb(92, 88, 88);
