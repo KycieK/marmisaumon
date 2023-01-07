@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:700&display=swap');
+
+body {
+    padding: 0px;
+    margin: 30px;
+    background:rgb(218, 206, 206);
+}
+
+/*=================*/
+
+.Titre2{
+    font-family: 'Dancing Script';
+    letter-spacing: 0.16rem;
+    color:#d67c37;
+    text-align: center;
+    -webkit-text-stroke: 1px rgb(43, 50, 44);
+    text-shadow: 5px 5px 5px rgb(92, 88, 88);
+}
+
+/*=================*/
+
+h3 {
+    font-size: 3.4em;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 64em) {
+    h3 {
+        font-size: 3.1em;
+    }
+}
+
+@media screen and (max-width: 50em) {
+    h3 {
+        font-size: 2.8em;
+    }
+}
+
+@media screen and (max-width: 40em){
+    h3 {
+        font-size: 2.5em;
+    }
+}
+
+.liste{
+    margin-left:10px;
+}
+
+#ingredients input[type="text"]{
+    margin-top : 8px;
+    margin-right : 8px;
+    float:left;
+}
+
+#ingredients input[type="number"]{
+    margin-top : 8px;
+    margin-right : 8px;
+    float:left;
+}
+
+#ingredients input[name ="premier"]{
+    clear:left;
+}
+
+/*=================*/
+
+.instructions{
+    width:100%;
+    max-width:1200px;
+    height:auto;
+}
+
+textarea{
+    width:75%;
+    max-width:1200px;
+    block-size: 150px;
+}
+
+/*=================*/
+
+label{
+    clear:left;
+    font-size: 1.4em;
+}
+
+@media screen and (max-width: 64em) {
+    label {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 50em) {
+    label {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 40em){
+    label {
+        font-size: 1.1em;
+    }
+}
+
+/*=================*/
+
+#imgdiff{
+    width: 100%;
+    max-width: 45px;
+    height: auto;
+}
+
+@media screen and (max-width: 64em) {
+    #imgdiff {
+        max-width: 40px;
+    }
+}
+
+@media screen and (max-width: 50em) {
+    #imgdiff {
+        max-width: 35px;
+    }
+}
+
+@media screen and (max-width: 40em){
+    #imgdiff {
+        max-width: 30px;
+    }
+}

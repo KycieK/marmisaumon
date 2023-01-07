@@ -5,7 +5,7 @@ var r = 0;
 function changeImage(element)
 {
     let v = element.getAttribute('src');
-    if(v == "toque2.png"){
+    if(v == "toque2.png"){!
         (v = "toque21.png");
         let r = element.getAttribute('class');
         while(r>0){
@@ -26,7 +26,7 @@ function changeImage(element)
   
 }
 
-//permet un reset de la diffcultée par un double clique sur la premiere toque
+//permet un reset de la diffcultée par un double-clic sur la premiere toque
 function resetDiff(){
     let m = document.getElementsByClassName(1).item(0);
     m.setAttribute('src', 'toque2.png');
@@ -83,6 +83,7 @@ function removeInput(){
     i--;
 }
 
+//affichage du form
 function displayForm() {
     let x = document.getElementById("invisibleMain");
     let y = document.getElementById("disparait");
@@ -90,6 +91,7 @@ function displayForm() {
     y.setAttribute('style','display:none')
 }
 
+//suppression du form
 function cancel() {
     let x = document.getElementById("invisibleMain");
     let y = document.getElementById("disparait");

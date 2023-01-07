@@ -2,9 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Déjeuner sucré</title>
-        <link rel= "stylesheet" href="proj.css">
-        <script type = "text/javascript" src = "proj.js"></script>
+        <title>Dîner salé</title>
+        <script type = "text/javascript" src = "../../proj.js"></script>
+        <link rel="stylesheet" href="recettes-style.css">
+        <link rel="stylesheet" href="../headerFooter-style.css">
     </head>
 
     <body>
@@ -15,7 +16,7 @@
                 </h3>
             </div>
             <div class = "accueil"> 
-                <a href = 'accueil.html'><img src = 'téléchargé.png' alt="icone accueil" height="30px" width="30px"></a>
+                <a href = '../accueil.html'><img src = '../../Fichiers/téléchargé.png' alt="icone accueil" height="30px" width="30px"></a>
             </div> 
             <section class="menubar">
                 <ul class = 'menu'>
@@ -58,23 +59,9 @@
 
         <button onclick="displayForm()" id="disparait" style="display:block">Ajouter une recette</button>
 
-        <section class="liste" id="invisibleMain" style="display:none">
-            <form method = "post" name="newTask" class="box" id="newTask" onsubmit="return false">
+        <section class="liste" id="invisibleMain" style="display:none">            <form method = "post" name="newTask" class="box" id="newTask" onsubmit="return false">
                 <label>Nom de la recette : </label>
                 <input type="'text" id="recette" name="newRecette" size=18 placeholder="pudding au caramel" required>
-                <br><br>
-                <label>Type de la recette : </label>
-                <select name="repas" id="quelRepas" size=auto>
-                    <option>Petit déjeuner</option>
-                    <option>Déjeuner</option>
-                    <option>Goûter</option>
-                    <option>Diner</option>
-                </select>
-                <select name="type" id="typeRepas" size=auto>
-                    <option>sucré</option>
-                    <option>salé</option>
-                    <option>sucré-salé</option>
-                </select>
 
                 <br><br><br><label>Informations générales :<br></label>
                 <label><br>Temps total : </label>
@@ -132,7 +119,7 @@
         </section>
 
         <footer>
-            <a href="apropos.html">A propos</a>
+            <a href="../apropos.html">A propos</a>
         </footer>
     </body>
 </html>
