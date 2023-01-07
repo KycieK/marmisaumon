@@ -1,5 +1,6 @@
 var i = 0;
 var r = 0;
+var z = 0;
 
 //gère l'affichage des toques qui correspondent à la difficultée de la recette ajoutée
 function changeImage(element)
@@ -89,6 +90,37 @@ function displayForm() {
     let y = document.getElementById("disparait");
     x.setAttribute('style','display:block');
     y.setAttribute('style','display:none')
+
+    const newItem = document.createElement('div');
+    newItem.className = "vamourir";
+    newItem.id = 100 + z + 10;
+
+    var variable1 = document.createElement('label');
+    variable1.id = 100 + z;
+    variable1.className = "nomRecette";
+
+    var variable2 = document.createElement('label');
+    variable2.id = 100 + z + 1;
+    variable1.className = "nomRecette";
+
+    var variable3 = document.createElement('label');
+    variable3.id = 100 + z + 2;
+    variable1.className = "nomRecette";
+
+    var variable4 = document.createElement('label');
+    variable4.id = 100 + z + 3;
+    variable1.className = "nomRecette";
+
+    var variable5 = document.createElement('label');
+    variable5.id = 100 + z + 4;
+    variable1.className = "nomRecette";
+
+    var variable6 = document.createElement('label');
+    variable6.id = 100 + z + 5;
+    variable1.className = "nomRecette";
+
+    newItem.append(variable1, variable2, variable3, variable4, variable5, variable6);
+    document.getElementsByClassName("listeRecettes").item(0).appendChild(newItem);
 }
 
 //suppression du form
@@ -97,6 +129,32 @@ function cancel() {
     let y = document.getElementById("disparait");
     y.setAttribute('style','display:block');
     x.setAttribute('style','display:none')
+
+    var formAReset = document.getElementsByClassName("box").item(0);
+    formAReset.reset();
+
+    let m1 = document.getElementsByClassName(1).item(0);
+    m1.setAttribute('src', 'toque2.png');
+    let m2 = document.getElementsByClassName(2).item(0);
+    m2.setAttribute('src', 'toque2.png');
+    let m3 = document.getElementsByClassName(3).item(0);
+    m3.setAttribute('src', 'toque2.png');
+    let m4 = document.getElementsByClassName(4).item(0);
+    m4.setAttribute('src', 'toque2.png');
+    let m5 = document.getElementsByClassName(5).item(0);
+    m5.setAttribute('src', 'toque2.png');
+
+    while (i > 0) {
+        var a = document.getElementById(i);
+        a.remove();
+        var b = document.getElementById(i);
+        b.remove();
+        var c = document.getElementById(i);
+        c.remove();
+        i--;
+    }
+
+    document.getElementsByClassName("listeRecettes").item(0).removeChild(document.getElementById(100 + z + 10));
 }
 
 //zone de texte de la preparation pendant la cuisson 
@@ -111,6 +169,11 @@ function changeId(){
 
 //ajout de recette
 function addRecette(){
+    let x = document.getElementById("invisibleMain");
+    let y = document.getElementById("disparait");
+    y.setAttribute('style','display:block');
+    x.setAttribute('style','display:none');
+
     //nom
     const nomRecette = document.getElementById("recette").value;
 
@@ -124,7 +187,7 @@ function addRecette(){
     const tempsCuiH = document.getElementById("temps3.1").value;
     const tempsCuiMin = document.getElementById("temps3.2").value;
 
-    //difficultée recette (pas fait de manière intelligente mais plus facile comme ca pour plus tard)
+    //difficulté recette (pas fait de manière intelligente mais plus facile comme ca pour plus tard)
     const toque1 = document.createElement('img');
     toque1.src = document.getElementsByClassName(1).item(0).src;
     toque1.setAttribute("id","imgdiff");
@@ -170,10 +233,11 @@ function addRecette(){
     const CuiRecette = document.getElementById("box2").value;
     const prepCuiRecette = document.getElementById("invisible").value;
 
-    const newRecetteImg = document.getElementById('newRecetteImg');
+    const newRecetteImg = document.getElementById(100 + z + 1);
 
-    document.getElementById('newRecette').innerHTML = nomRecette + "<br><br>" + "Le temps total que vous devez prévoir est de  " + tempsTotalH  +"h"+ tempsTotalMin + 'min</br>' + "Le temps de préparation est de " + tempsPrepH + "h" + tempsPrepMin + "min<br>" + "Le temps de cuisson est de " + tempsCuiH + "h" + tempsCuiMin + "min<br>";
-    document.getElementById('newRecetteImg').innerHTML = "<br>Difficulté de la recette : ";
+
+    document.getElementById(100 + z).innerHTML = nomRecette + "<br><br>" + "Le temps total que vous devez prévoir est de  " + tempsTotalH  +" h "+ tempsTotalMin + ' min</br>' + "Le temps de préparation est de " + tempsPrepH + " h " + tempsPrepMin + " min<br>" + "Le temps de cuisson est de " + tempsCuiH + " h " + tempsCuiMin + " min<br>";
+    document.getElementById(100 + z + 1).innerHTML = "<br>Difficulté de la recette : ";
     newRecetteImg.append(toque1, toque2, toque3, toque4, toque5);
     var incrément = '';
     if(i>0) {
@@ -185,16 +249,69 @@ function addRecette(){
             i--;
         }while(i>0)
     }
-    document.getElementById('newRecette2').innerHTML ="<br><br>Les ingrédients nécessaires sont :<br>"+ incrément + "<br>";
+    document.getElementById(100 + z + 2).innerHTML ="<br><br>Les ingrédients nécessaires sont :<br>"+ incrément;
 
     if(prepRecette != ''){    
-        document.getElementById('zoneText1').innerHTML ="<br><br>Instructions de préparation : <br>" + prepRecette + "<br><br>";
+        document.getElementById(100 + z + 3).innerHTML ="<br>Instructions de préparation : <br>" + prepRecette + "<br><br>";
     }
     if(CuiRecette != ''){        
-        document.getElementById('zoneText2').innerHTML ="Instructions de Cuisson : <br>" + CuiRecette + "<br><br>";
+        document.getElementById(100 + z + 4).innerHTML ="Instructions de cuisson : <br>" + CuiRecette + "<br><br>";
     }
     if(prepCuiRecette != ''){        
-        document.getElementById('zoneText3').innerHTML ="Préparation à réaliser pendant la cuisson : <br>" + prepCuiRecette + "<br><br>";
+        document.getElementById(100 + z + 5).innerHTML ="Préparation à réaliser pendant la cuisson : <br>" + prepCuiRecette + "<br><br>";
+    }
+
+    z = z + 100;
+
+    //reset du form
+    var formAReset = document.getElementsByClassName("box").item(0);
+    formAReset.reset();
+
+    let m1 = document.getElementsByClassName(1).item(0);
+    m1.setAttribute('src', 'toque2.png');
+    let m2 = document.getElementsByClassName(2).item(0);
+    m2.setAttribute('src', 'toque2.png');
+    let m3 = document.getElementsByClassName(3).item(0);
+    m3.setAttribute('src', 'toque2.png');
+    let m4 = document.getElementsByClassName(4).item(0);
+    m4.setAttribute('src', 'toque2.png');
+    let m5 = document.getElementsByClassName(5).item(0);
+    m5.setAttribute('src', 'toque2.png');
+
+    while (i > 0) {
+        var a = document.getElementById(i);
+        a.remove();
+        var b = document.getElementById(i);
+        b.remove();
+        var c = document.getElementById(i);
+        c.remove();
+        i--;
+    }
+
+}
+
+
+
+
+function ajouter() {
+    var newTaskForm = document.forms.newTask;
+    console.log(newTaskForm.elements.tache.value + "\n" + newTaskForm.elements.date.value + "\n" + newTaskForm.elements.categorie.value);
+    
+    const newItem = document.createElement('tr');
+    const taskTd = document.createElement('td');
+    const dateTd = document.createElement('td');
+    const categorieTd = document.createElement('td');
+    taskTd.textContent = newTaskForm.elements.tache.value;
+    dateTd.textContent = newTaskForm.elements.date.value;
+    categorieTd.textContent = newTaskForm.elements.categorie.value;
+
+    if(tache.checkValidity() & date.checkValidity()) {
+        newItem.append(taskTd,dateTd,categorieTd);
+
+        const table = document.querySelector('.datatable tbody');
+        table.appendChild(newItem);
+    
+        console.log(table);
     }
     
 }
