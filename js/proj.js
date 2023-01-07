@@ -170,24 +170,31 @@ function addRecette(){
     const CuiRecette = document.getElementById("box2").value;
     const prepCuiRecette = document.getElementById("invisible").value;
 
-    const newRecette = document.getElementById('newRecette');
     const newRecetteImg = document.getElementById('newRecetteImg');
-    const newRecette2 = document.getElementById('newRecette2');
 
-    document.getElementById('newRecette').innerHTML = nomRecette + "<br>" + "Le temps total que vous devez prévoir est de  " + tempsTotalH  +"h"+ tempsTotalMin + 'min</br>' + "Le temps de préparation est de " + tempsPrepH + "h" + tempsPrepMin + "min<br>" + "Le temps de cuisson est de " + tempsCuiH + "h" + tempsCuiMin + "min<br>";
-    var pval = '';
+    document.getElementById('newRecette').innerHTML = nomRecette + "<br><br>" + "Le temps total que vous devez prévoir est de  " + tempsTotalH  +"h"+ tempsTotalMin + 'min</br>' + "Le temps de préparation est de " + tempsPrepH + "h" + tempsPrepMin + "min<br>" + "Le temps de cuisson est de " + tempsCuiH + "h" + tempsCuiMin + "min<br>";
+    document.getElementById('newRecetteImg').innerHTML = "<br>Difficulté de la recette : ";
+    newRecetteImg.append(toque1, toque2, toque3, toque4, toque5);
+    var incrément = '';
     if(i>0) {
         do{
-            pval = listeNomIngredients[i] + " " + listeQtiteIngredients[i] + " " + listeGrandeurIngredients[i] +"<br>"+pval;
+            incrément = listeNomIngredients[i] + " : " + listeQtiteIngredients[i] + " " + listeGrandeurIngredients[i] +"<br>"+ incrément;
             listeNomIngredients.push(listeNomIngredients[i]);
             listeQtiteIngredients.push(listeQtiteIngredients[i]);
             listeGrandeurIngredients.push(listeGrandeurIngredients[i]);
             i--;
         }while(i>0)
     }
-    document.getElementById('newRecette2').innerHTML = pval + "<br>";
-    if(prepRecette != ''){newRecette2.append(prepRecette);}
-    if(CuiRecette != ''){newRecette2.append(CuiRecette);}
-    if(prepCuiRecette != ''){newRecette2.append(prepCuiRecette);}
+    document.getElementById('newRecette2').innerHTML ="<br><br>Les ingrédients nécessaires sont :<br>"+ incrément + "<br>";
+
+    if(prepRecette != ''){    
+        document.getElementById('zoneText1').innerHTML ="<br><br>Instructions de préparation : <br>" + prepRecette + "<br><br>";
+    }
+    if(CuiRecette != ''){        
+        document.getElementById('zoneText2').innerHTML ="Instructions de Cuisson : <br>" + CuiRecette + "<br><br>";
+    }
+    if(prepCuiRecette != ''){        
+        document.getElementById('zoneText3').innerHTML ="Préparation à réaliser pendant la cuisson : <br>" + prepCuiRecette + "<br><br>";
+    }
     
 }
