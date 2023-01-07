@@ -59,39 +59,39 @@
 
         <button onclick="displayForm()" id="disparait" style="display:block">Ajouter une recette</button>
 
-        <section class="liste" id="invisibleMain" style="display:none"> 
-            <form method = "post" name="newRecette" class="box" id="newRecette" onsubmit="return false">
+        <section class="liste" id="invisibleMain" style="display:none">
+            <form method = "post" name="newRecette" class="box" onsubmit="return false">
                 <label>Nom de la recette : </label>
-                <input type="'text" id="recette" size=18 placeholder="pudding au caramel" required>
+                <input type="'text" id="recette" name="Recette" size=18 placeholder="pudding au caramel" required>
 
                 <br><br><br><label>Informations générales :<br></label>
                 <label><br>Temps total : </label>
-                <input type="number" id="temps11" min="0" max="24" name="tpsh" size = 1 placeholder="00">
+                <input type="number" id="temps1.1" name = "temps1.1" min="0" max="24" name="tpsh" size = 1 placeholder="00">
                 <label>h</label>
-                <input type="number" id="temps12" min="0" max="59" name="tpmin" size = 1 placeholder="00">
+                <input type="number" id="temps1.2" min="0" max="59" name="tpmin" size = 1 placeholder="00">
                 <label>min</label>
 
 
                 <label><br>Temps de préparation : </label>
-                <input type="number" id="temps21" min="0" max="24" name="tpsh" size = 1 placeholder="00">
+                <input type="number" id="temps2.1" min="0" max="24" name="tpsh" size = 1 placeholder="00">
                 <label>h</label>
-                <input type="number" id="temps22" min="0" max="59" name="tpmin" size = 1 placeholder="00">
+                <input type="number" id="temps2.2" min="0" max="59" name="tpmin" size = 1 placeholder="00">
                 <label>min</label>
 
             
                 <label><br>Temps de cuisson : </label>
-                <input type="number" id="temps31" min="0" max="24" name="tpsh" size = 1 placeholder="00">
+                <input type="number" id="temps3.1" min="0" max="24" name="tpsh" size = 1 placeholder="00">
                 <label>h</label>
-                <input type="number" id="temps32" min="0" max="59" name="tpmin" size = 1 placeholder="00">
+                <input type="number" id="temps3.2" min="0" max="59" name="tpmin" size = 1 placeholder="00">
                 <label>min</label>
 
 
                 <label><br><br>Difficulté de la recette : </label>
-                <img id='imgdiff' class=1 src='toque2.png' onclick="changeImage(this)" ondblclick="resetDiff()"/>
-                <img id='imgdiff' class=2 src='toque2.png' onclick="changeImage(this)" />
-                <img id='imgdiff' class=3 src='toque2.png' onclick="changeImage(this)" />
-                <img id='imgdiff' class=4 src='toque2.png' onclick="changeImage(this)" />
-                <img id='imgdiff' class=5 src='toque2.png' onclick="changeImage(this)" />
+                <img id='imgdiff' name = "imgdiff1" class=1 src='toque2.png' onclick="changeImage(this)" ondblclick="resetDiff()"/>
+                <img id='imgdiff' name = "imgdiff2" class=2 src='toque2.png' onclick="changeImage(this)" />
+                <img id='imgdiff' name = "imgdiff3" class=3 src='toque2.png' onclick="changeImage(this)" />
+                <img id='imgdiff' name = "imgdiff4" class=4 src='toque2.png' onclick="changeImage(this)" />
+                <img id='imgdiff' name = "imgdiff5" class=5 src='toque2.png' onclick="changeImage(this)" />
 
 
                 <br><br><br><label>Ingrédients :<br></label>
@@ -117,6 +117,13 @@
                 <button onclick="cancel()">Annuler</button>
                 <br><br><br><br><br><br><br><br><br><br>
             </form> 
+            <div id = "ajoutFutureRecette">
+                <label id="newRecette"></label>
+                <label id="newRecetteImg"></label>
+                <label id="zoneText1"></label>
+                <label id="zoneText2"></label>
+                <label id="zoneText3"></label>
+            </div>
         </section>
 
         <footer>
