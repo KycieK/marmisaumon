@@ -111,59 +111,6 @@ function changeId(){
 
 //ajout de recette
 function addRecette(){
-   /* var newRecetteForm = document.forms.newRecette;
-    console.log(newRecetteForm.elements.temps11.value);
-    
-    const newItem = document.createElement('tr');
-
-    const nomRecette = document.createElement('label');
-
-    //durée recette
-    const tempsTotalH = document.createElement('label');
-    const tempsTotalMin = document.createElement('label');
-    
-    const tempsPrepH = document.createElement('label');
-    const tempsPrepMin = document.createElement('label');
-
-    const tempsCuiH = document.createElement('label');
-    const tempsCuiMin = document.createElement('label');
-
-    //difficultée recette (pas fait de manière intelligente mais plus facile comme ca pour plus tard)
-    const toque1 = document.createElement('td');
-    const toque2 = document.createElement('td');
-    const toque3 = document.createElement('td');
-    const toque4 = document.createElement('td');
-    const toque5 = document.createElement('td');
-
-
-
-    nomRecette.textContent = newRecetteForm.elements.recette.value;
-
-    tempsTotalH.textContent = newRecetteForm.elements.temps11.value;
-    tempsTotalMin.textContent = newRecetteForm.elements.temps12.value;
-
-    tempsPrepH.textContent = newRecetteForm.elements.temps21.value;
-    tempsPrepMin.textContent = newRecetteForm.elements.temps22.value;
-
-    tempsCuiH.textContent = newRecetteForm.elements.temps31.value;
-    tempsCuiMin.textContent = newRecetteForm.elements.temps32.value;
-
-    toque1.textContent = newRecetteForm.elements.imgdiff1.value;
-    toque2.textContent = newRecetteForm.elements.imgdiff2.value;
-    toque3.textContent = newRecetteForm.elements.imgdiff3.value;
-    toque4.textContent = newRecetteForm.elements.imgdiff4.value;
-    toque5.textContent = newRecetteForm.elements.imgdiff5.value;
-
-
-    newItem.append(nomRecette,tempsTotalH,tempsTotalMin,tempsPrepH,tempsPrepMin,toque1,toque2,toque3,toque4,toque5);
-
-    const table = document.querySelector('.ajoutRecette');
-    table.appendChild(newItem);
-    
-    console.log(table);*/
-
-    const newItem = document.createElement('tr');
-
     //nom
     const nomRecette = document.getElementById("recette").value;
 
@@ -178,11 +125,25 @@ function addRecette(){
     const tempsCuiMin = document.getElementById("temps3.2").value;
 
     //difficultée recette (pas fait de manière intelligente mais plus facile comme ca pour plus tard)
-    const toque1 = document.getElementsByClassName(1).item(0).img;
-    const toque2 = document.getElementsByClassName(2).item(0).img;
-    const toque3 = document.getElementsByClassName(3).item(0).img;
-    const toque4 = document.getElementsByClassName(4).item(0).img;
-    const toque5 = document.getElementsByClassName(5).item(0).img;
+    const toque1 = document.createElement('img');
+    toque1.src = document.getElementsByClassName(1).item(0).src;
+    toque1.setAttribute("id","imgdiff");
+
+    const toque2 = document.createElement('img');
+    toque2.src = document.getElementsByClassName(2).item(0).src;
+    toque2.setAttribute("id","imgdiff");
+
+    const toque3 = document.createElement('img');
+    toque3.src = document.getElementsByClassName(3).item(0).src;
+    toque3.setAttribute("id","imgdiff");
+    
+    const toque4 = document.createElement('img');
+    toque4.src = document.getElementsByClassName(4).item(0).src;
+    toque4.setAttribute("id","imgdiff");
+    
+    const toque5 = document.createElement('img');
+    toque5.src = document.getElementsByClassName(5).item(0).src;
+    toque5.setAttribute("id","imgdiff");
 
     //ingredients, le code est un peu compliqué car on doit trouver le nombre d'ingrédients et on insere une sécurité dans le cas d'ajout d'ingrédient post envoi de recette
     const listeNomIngredients = [];
@@ -204,14 +165,21 @@ function addRecette(){
         }while(j>0)
     }
 
-    console.log(listeGrandeurIngredients, listeNomIngredients, listeQtiteIngredients);
-
     //zones de texte 
     const prepRecette = document.getElementById("box1").value;
     const CuiRecette = document.getElementById("box2").value;
     const prepCuiRecette = document.getElementById("invisible").value;
 
     const newRecette = document.getElementById('newRecette'); 
-    newRecette.append(nomRecette,tempsTotalH,tempsTotalMin,tempsPrepH,tempsPrepMin,tempsCuiH,tempsCuiMin);
+    newRecette.append(nomRecette,"\n" + tempsTotalH,tempsTotalMin,tempsPrepH,tempsPrepMin,tempsCuiH,tempsCuiMin,toque1,toque2,toque3,toque4,toque5);
+    if(i>0) {
+        do{
+            newRecette.append(listeNomIngredients[i],listeQtiteIngredients[i],listeGrandeurIngredients[i]);
+            i--;
+        }while(i>0)
+    }
+    if(prepRecette != ''){newRecette.append(prepRecette);}
+    if(CuiRecette != ''){newRecette.append(CuiRecette);}
+    if(prepCuiRecette != ''){newRecette.append(prepCuiRecette);}
     
 }
