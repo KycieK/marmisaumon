@@ -92,34 +92,38 @@ function displayForm() {
     y.setAttribute('style','display:none')
 
     const newItem = document.createElement('div');
-    newItem.className = "vamourir";
+    newItem.className = "recetteAjoutee";
     newItem.id = 100 + z + 10;
+    newItem.setAttribute('style','display:none')
+
+    const contenu = document.createElement('div');
+    contenu.className = "contenu";
 
     var variable1 = document.createElement('label');
     variable1.id = 100 + z;
-    variable1.className = "nomRecette";
+    variable1.className = "TitreRecette";
 
     var variable2 = document.createElement('label');
     variable2.id = 100 + z + 1;
-    variable1.className = "nomRecette";
+    variable2.className = "Difficultee";
 
     var variable3 = document.createElement('label');
     variable3.id = 100 + z + 2;
-    variable1.className = "nomRecette";
 
     var variable4 = document.createElement('label');
     variable4.id = 100 + z + 3;
-    variable1.className = "nomRecette";
 
     var variable5 = document.createElement('label');
     variable5.id = 100 + z + 4;
-    variable1.className = "nomRecette";
 
     var variable6 = document.createElement('label');
     variable6.id = 100 + z + 5;
-    variable1.className = "nomRecette";
 
-    newItem.append(variable1, variable2, variable3, variable4, variable5, variable6);
+    var variable7 = document.createElement('label');
+    variable7.id = 100 + z + 6;
+
+    contenu.append(variable3, variable4, variable5, variable6, variable7);
+    newItem.append(variable1, variable2, contenu);
     document.getElementsByClassName("listeRecettes").item(0).appendChild(newItem);
 }
 
@@ -238,11 +242,13 @@ function addRecette(){
 
     const newRecetteImg = document.getElementById(100 + z + 1);
 
+    document.getElementById(100 + z + 10).setAttribute('style','display:block');
 
-    document.getElementById(100 + z).innerHTML = nomRecette + "<br><br>" + "Le temps total que vous devez prévoir est de  " + tempsTotalH  +" h "+ tempsTotalMin + ' min</br>' + "Le temps de préparation est de " + tempsPrepH + " h " + tempsPrepMin + " min<br>" + "Le temps de cuisson est de " + tempsCuiH + " h " + tempsCuiMin + " min<br>";
+    document.getElementById(100 + z).innerHTML = nomRecette;
     document.getElementById(100 + z + 1).innerHTML = "<br>Difficulté de la recette : ";
     newRecetteImg.append(toque1, toque2, toque3, toque4, toque5);
     var incrément = '';
+    var j = i;
     if(i>0) {
         do{
             incrément = listeNomIngredients[i] + " : " + listeQtiteIngredients[i] + " " + listeGrandeurIngredients[i] +"<br>"+ incrément;
@@ -252,16 +258,18 @@ function addRecette(){
             i--;
         }while(i>0)
     }
-    document.getElementById(100 + z + 2).innerHTML ="<br><br>Les ingrédients nécessaires sont :<br>"+ incrément;
+    document.getElementById(100 + z + 2).innerHTML = "<br><br>" + "Le temps total que vous devez prévoir est de  " + tempsTotalH  +" h "+ tempsTotalMin + ' min</br>' + "Le temps de préparation est de " + tempsPrepH + " h " + tempsPrepMin + " min<br>" + "Le temps de cuisson est de " + tempsCuiH + " h " + tempsCuiMin + " min<br>";
+
+    document.getElementById(100 + z + 3).innerHTML ="<br><br>Les ingrédients nécessaires sont :<br>"+ incrément;
 
     if(prepRecette != ''){    
-        document.getElementById(100 + z + 3).innerHTML ="<br>Instructions de préparation : <br>" + prepRecette + "<br><br>";
+        document.getElementById(100 + z + 4).innerHTML ="<br>Instructions de préparation : <br>" + prepRecette + "<br><br>";
     }
     if(CuiRecette != ''){        
-        document.getElementById(100 + z + 4).innerHTML ="Instructions de cuisson : <br>" + CuiRecette + "<br><br>";
+        document.getElementById(100 + z + 5).innerHTML ="Instructions de cuisson : <br>" + CuiRecette + "<br><br>";
     }
     if(prepCuiRecette != ''){        
-        document.getElementById(100 + z + 5).innerHTML ="Préparation à réaliser pendant la cuisson : <br>" + prepCuiRecette + "<br><br>";
+        document.getElementById(100 + z + 6).innerHTML ="Préparation à réaliser pendant la cuisson : <br>" + prepCuiRecette + "<br><br>";
     }
 
     z = z + 100;
@@ -281,20 +289,19 @@ function addRecette(){
     let m5 = document.getElementsByClassName(5).item(0);
     m5.setAttribute('src', 'toque2.png');
 
-    while (i > 0) {
-        var a = document.getElementById(i);
+    let d = document.getElementById("invisible");
+    d.setAttribute('style','display:none')
+
+    while (j > 0) {
+        var a = document.getElementById(j);
         a.remove();
-        var b = document.getElementById(i);
+        var b = document.getElementById(j);
         b.remove();
-        var c = document.getElementById(i);
+        var c = document.getElementById(j);
         c.remove();
-        i--;
+        j--;
     }
-
 }
-
-
-
 
 function ajouter() {
     var newTaskForm = document.forms.newTask;
@@ -316,5 +323,4 @@ function ajouter() {
     
         console.log(table);
     }
-    
 }

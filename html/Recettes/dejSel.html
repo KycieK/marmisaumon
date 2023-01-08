@@ -61,10 +61,10 @@
 
         <section class="liste" id="invisibleMain" style="display:none">
             <form method = "post" name="newRecette" class="box" onsubmit="return false">
-                <label>Nom de la recette : </label>
-                <input type="'text" id="recette" name="Recette" size=18 placeholder="pudding au caramel" required>
+                <label class="souligne">Nom de la recette :</label>
+                <input type="text" id="recette" name="Recette" size=18 placeholder="pudding au caramel" required>
 
-                <br><br><br><label>Informations générales :<br></label>
+                <br><br><br><label class="souligne">Informations générales :<br></label>
                 <label><br>Temps total : </label>
                 <input type="number" id="temps1.1" name = "temps1.1" min="0" max="24" name="tpsh" size = 1 placeholder="00">
                 <label>h</label>
@@ -94,14 +94,13 @@
                 <img id='imgdiff' name = "imgdiff5" class=5 src='toque2.png' onclick="changeImage(this)" />
 
 
-                <br><br><br><label>Ingrédients :<br></label>
+                <br><br><br><label class="souligne">Ingrédients :<br></label>
                 <button id='ajre' value="Add Input" onclick="addInput()">Ajouter un ingrédient</button>
                 <button id='ajre' value="Add Input" onclick="removeInput()">Retirer un ingrédient</button>
                 <div id="ingredients"></div>
-                <br>
+
                 <div class="instructions">
-                    <br><br><br>
-                    <label class="alignement">Détaillez la préparation de votre recette ci-dessous (pré-cuisson) :</label>
+                    <label class="alignement"><br><br>Détaillez la préparation de votre recette ci-dessous (pré-cuisson) :</label>
                     <textarea id="box1" placeholder="Eplucher les légumes..."></textarea>
                     <br><br>
                     <label class="alignement">Détaillez la cuisson de votre recette :</label>
@@ -115,17 +114,12 @@
                 <br><br><br><br>
                 <button onclick="addRecette()">Ajouter la recette</button>
                 <button onclick="cancel()">Annuler</button>
-                <br><br><br><br><br><br><br><br><br><br>
             </form> 
-            <div id = "ajoutFutureRecette">
-                <label id="newRecette"></label>
-                <label id="newRecetteImg"></label>
-                <label id="zoneText1"></label>
-                <label id="zoneText2"></label>
-                <label id="zoneText3"></label>
-            </div>
         </section>
-
+        <br><br>
+        <section class="listeRecettes">
+        </section>
+        <br><br><br><br><br><br><br><br><br><br>
         <footer>
             <a href="../apropos.html">A propos</a>
         </footer>

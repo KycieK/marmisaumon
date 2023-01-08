@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:700&display=swap');
 
+.oui {
+    width: 100%;
+    font-size: x-large;
+    text-align: center;
+    display: block;
+}
+
+
+
+
 /*=================*/
 
 .texteAccueil {font-size: 1.7em;}
