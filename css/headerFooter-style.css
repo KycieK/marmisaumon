@@ -8,14 +8,15 @@ footer {
     position: fixed;
     width: 100%;
     bottom:0px;
-    height: 85px;
-    padding-top:30px;
+    height: 100px;
+    padding-top:20px;
     background:rgb(218, 206, 206);
 }
 
 footer a {
     color: rgb(84, 84, 84);
     text-decoration: none;
+    margin: 300px;
 }
 
 footer a:hover {
